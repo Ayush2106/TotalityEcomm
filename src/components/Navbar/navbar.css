@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    padding: 1%;
+}
+.nav1{
+    flex: 0.3;
+}
+
+.nav2{
+    flex: 0.7;
+   display: flex;
+   justify-content: space-evenly;
+}
+@media (min-width: 770px) {
+    .navresp{
+        display: none;
+        }
+}
+@media (max-width: 769px) {
+.nav2{
+    display: none;
+}
+.navresp{
+    position: absolute;
+right: 0;
+}
+}
