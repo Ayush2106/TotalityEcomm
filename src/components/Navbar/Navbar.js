@@ -50,12 +50,7 @@ function ColorSchemesExample() {
                 >
                   {auth?.user?.name}
                 </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
-                >
-                  Dashboard
-                </NavLink>
+                
                 <NavLink
                   className="nav-link"
                   onClick={handleLogout}
@@ -116,12 +111,7 @@ function ColorSchemesExample() {
               >
                 {auth?.user?.name}
               </NavLink>
-              <NavLink
-                className="nav-link"
-                to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
-              >
-                Dashboard
-              </NavLink>
+            
               <NavLink className="nav-link" onClick={handleLogout} to="/login">
                 Logout
               </NavLink>

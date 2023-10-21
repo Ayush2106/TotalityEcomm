@@ -52,12 +52,21 @@ const ProductDetails = () => {
           />
         </div>
         <div className="col-md-6">
-          <h1>Product Details</h1>
-          <h5>Name:{product.name}</h5>
-          <h5>Description:{product.description}</h5>
-          <h5>Price:{product.price}</h5>
-          <h5>Category:{product?.category?.name}</h5>
-          <button className="btn btn-secondary ms-1">Add to cart </button>
+          <h2>Product Details</h2>
+          <h5>Name : <span style={{fontSize:'18px'}}>{product.name}</span></h5>
+          <h5>Description : <span style={{fontSize:'18px'}}>{product.description}</span></h5>
+          <h5>Price :  <span style={{fontSize:'18px'}}>{product.price}</span></h5>
+          <h5>Category :  <span style={{fontSize:'18px'}}>{product?.category?.name}</span></h5>
+          <button 
+             className="btn btn-secondary ms-1"
+             onClick={() => {
+               setCart([...cart, product]);
+               localStorage.setItem("cart", JSON.stringify([...cart, product]));
+               toast.success("item added to cart");
+             }}
+           >
+             Add to cart{" "}
+           </button>{" "}
         </div>
       </div>
       <div className="row container">

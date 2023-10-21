@@ -6,6 +6,7 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from "../Prices";
 import { useCart } from "../context/cart";
 import "./homepage.css";
+import ImageCarousel from "./ImageCarousel";
 function Homepage() {
   const [cart, setCart] = useCart();
   const [products, setProducts] = useState([]);
@@ -70,16 +71,25 @@ function Homepage() {
       console.log(error);
     }
   };
+
+
+  const images = [
+    'https://buysellgraphic.com/images/graphic_preview/thumb/ecommerce_website_banner_template_customers_sketch_flat_design_55246.jpg',
+    'https://www.shutterstock.com/image-vector/ecommerce-website-banner-template-presents-260nw-2252124451.jpg',
+    'https://t4.ftcdn.net/jpg/05/00/17/35/360_F_500173589_ApB8UyyuS13bnTEGeWRiXXH1uruZhrRQ.jpg',
+    'https://www.bestdigitalsales.com/wp-content/uploads/2015/12/ecommerce-banner.jpg',
+  ];
   return (
     <div>
-      <img
-        width="100%"
-        height={300}
-        src="https://img.freepik.com/free-vector/mega-sale-banner-your-online-store-realistic-style-with-phone-map-cart-bag-gift-vector-illustration_548887-132.jpg"
-      />
-      <div className="row">
-        <div className="col-md-2">
-          <div className="text-center" style={{ fontWeight: "bold" }}>
+      <div>
+      <ImageCarousel images={images} />
+      </div>
+
+      {/* <div className="row" style={{display:'flex',justifyContent:'space-evenly'}}> */}
+      <div className="producttt">
+        <div className="leftpart" >
+        <div>
+          <div  style={{ fontWeight: "bold" }}>
             Filter by Categories
           </div>
           <div className="d-flex flex-column">
@@ -92,9 +102,11 @@ function Homepage() {
               </Checkbox>
             ))}
           </div>
+          </div>
 
           {/* //price filter */}
-          <div className="text-center" style={{ fontWeight: "bold" }}>
+       <div>
+          <div style={{ fontWeight: "bold" }}>
             Filter by Price
           </div>
           <div className="d-flex flex-column">
@@ -110,22 +122,24 @@ function Homepage() {
             <button
               className="btn btn-danger"
               onClick={() => window.location.reload()}
+              style={{ marginTop:'1%'}}
             >
               RESET FILTERS
             </button>
           </div>
+          </div>
+
         </div>
-        <div className="col-md-3">
+        <div className="rightpart">
           {/* {JSON.stringify(radio, null, 4)};{JSON.stringify(checked, null, 4)}; */}
-          <h1 className="text-center">All Product</h1>
+          {/* <h1 className="text-center">All Product</h1> */}
           <div className="ayush">
             {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+              <div className="card " style={{ width: "18rem" }} key={p._id}>
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/produuct-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
-                  style={{ width: "100%", height: "50%", margin: "auto" }}
                 />
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>

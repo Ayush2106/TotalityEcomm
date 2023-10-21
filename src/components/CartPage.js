@@ -6,6 +6,8 @@ import { Button } from "antd";
 import axios from "axios";
 import DropIn from "braintree-web-drop-in-react";
 import { toast } from "react-toastify";
+import  {BsFillCartFill} from "react-icons/bs";
+import {MdCelebration} from "react-icons/md"
 
 const CartPage = () => {
   const [auth] = useAuth();
@@ -82,19 +84,22 @@ const CartPage = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="text-center bg-light p-2 mb-1">
+            <h1 className="text-center bg-light p-2 mb-1 ">
               {`Hello ${auth?.token && auth?.user?.name}`}
+              <MdCelebration/>
             </h1>
             <h4 className="text-center">
               {cart?.length > 1
-                ? `you have ${cart.length} items in your cart ${
-                    auth?.token ? "" : "please login to checkout"
+                ? `You have ${cart.length} Items in your Cart ${
+                    auth?.token ? "" : "Please Login To Checkout"
                   }`
-                : "Your cart is empty"}
+                : "Your cart is empty"
+              }
+              <BsFillCartFill/>
             </h4>
           </div>
         </div>
-        <div className="row">
+        <div className="row" style={{marginTop:'40px'}}>
           <div className="col-md-6">
             {cart?.map((p) => (
               <div className="row mb-2 p-3 card flex-row">
@@ -111,6 +116,16 @@ const CartPage = () => {
                   <h4>{p.name}</h4>
                   <h5>{p.description.substring(0, 30)}</h5>
                   <p>Price:{p.price}</p>
+                  <Button 
+                  onClick={() => {
+                    setCart([...cart, p]);
+                    localStorage.setItem(
+                      "cart",
+                      JSON.stringify([...cart, p])
+                    );
+                  }}
+
+                  >+</Button>
                   <Button
                     className="btn btn-danger"
                     onClick={() => removeCartItem(p._id)}
@@ -121,16 +136,18 @@ const CartPage = () => {
               </div>
             ))}
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-md-6 text-center">
             <h2>Cart Summary</h2>
             <p>TOTAL | CHECKOUT | PAYMENT</p>
             <hr />
-            <h4>TOTAL:{totalPrice()}</h4>
+            <h4>Total Amount :{totalPrice()}</h4>
             {auth?.user?.address ? (
               <>
                 <div className="mb-3">
-                  <h1>Current Address</h1>
-                  <h5>{auth?.user?.address}</h5>
+                  <h4>Current Address :<span style={{fontSize:'20px'}}>
+                    {auth?.user?.address}
+                    </span>
+                     </h4>
                   <button
                     className="btn btn-outline-warning"
                     onClick={() => navigate("/dashboard/user/profile")}

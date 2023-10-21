@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import UserMenu from "../UserMenu";
+// import UserMenu from "../UserMenu";
 import { useAuth } from "../context/auth";
 import { toast } from "react-toastify";
 import axios from "axios";
+import "../Login/login.css";
 const Profile = () => {
   //context
   const [auth, setAuth] = useAuth();
@@ -51,24 +52,12 @@ const Profile = () => {
     }
   };
   return (
-    <div title={"Profile"}>
-      {/* <div className="container-flui m-3 p-3 dashboard">
-        <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
-          <div className="col-md-9">
-            <div className="card w-75 p-3">Profile</div>
-          </div>
-        </div>
-      </div> */}
+    <div className ="formProfile" title={"Profile"}>
+     
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
-          <div className="col-md-8">
-            <div className="form-container" style={{ marginTop: "-40px" }}>
+          <div >
+            <div className="form-container" >
               <form onSubmit={handleSubmit}>
                 <h4 className="title">USER PROFILE</h4>
                 <div className="mb-3">
