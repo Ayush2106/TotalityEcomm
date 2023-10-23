@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+TotalityCorp Frontend Assignment: MERN Stack E-commerce Web Application with User Functionalities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Brief: I developed a full-stack e-commerce web application using the MERN (MongoDB, Express.js, React.js, Node.js) stack, focusing on user functionalities. The project encompasses user authentication, user dashboard, product browsing with filters, cart management, and address updates.
 
-## Available Scripts
+Key Features:
 
-In the project directory, you can run:
+1. User Authentication:
+   - Implemented secure user registration, login, and forgot password functionality.
+   - Utilized JSON Web Tokens (JWT) for user authentication and session management.
 
-### `npm start`
+2. User Dashboard:
+   - Provided users with a personalized dashboard to manage their profile.
+   - Enabled users to update their addresses for a seamless shopping experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Homepage and Product Display:
+   - Designed an intuitive homepage displaying various product categories.
+   - Integrated a filtering mechanism to enable users to sort products by category and price.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Cart Management:
+   - Enabled users to add and remove products to/from their shopping cart.
+   - Calculated the total cart value dynamically.
 
-### `npm test`
+Technical Stack:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Frontend: Developed using React.js to ensure a dynamic and responsive user interface.
+- Backend: Created a RESTful API with Node.js and Express.js for smooth communication between the frontend and database.
+- Database: MongoDB used for data storage due to its flexibility and scalability.
+- Authentication: Employed JWT for secure user authentication and session management.
 
-### `npm run build`
+Outcome:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By developing this MERN stack e-commerce project for TotalityCorp's frontend assignment, I gained valuable experience in building a user-centric web application. This project demonstrates my expertise in frontend development with React.js, as well as backend development with Node.js and Express.js. Additionally, it showcases my ability to implement user authentication, dynamic product filtering, cart management, and address updates to enhance the user experience.
