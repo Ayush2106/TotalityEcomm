@@ -32,3 +32,5 @@ Technical Stack:
 Outcome:
 
 By developing this MERN stack e-commerce project for TotalityCorp's frontend assignment, I gained valuable experience in building a user-centric web application. This project demonstrates my expertise in frontend development with React.js, as well as backend development with Node.js and Express.js. Additionally, it showcases my ability to implement user authentication, dynamic product filtering, cart management, and address updates to enhance the user experience.
+
+**Please note that the loading times for product listings and data retrieval in this MERN stack web application may vary and take some time, depending on the server response and internet connection speed. Thanks for understanding.**
