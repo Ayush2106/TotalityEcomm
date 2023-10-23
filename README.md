@@ -2,6 +2,8 @@ TotalityCorp Frontend Assignment: MERN Stack E-commerce Web Application with Use
 
 Brief: I developed a full-stack e-commerce web application using the MERN (MongoDB, Express.js, React.js, Node.js) stack, focusing on user functionalities. The project encompasses user authentication, user dashboard, product browsing with filters, cart management, and address updates.
 
+Deployed Link : https://totality-ecomm.vercel.app/
+
 Key Features:
 
 1. User Authentication:
